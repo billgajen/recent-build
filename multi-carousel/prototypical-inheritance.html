@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>JS Mission Three</title>
+	<style type="text/css">
+		li {list-style: none; float: left;}
+		img {display: block;}
+		.carousel, .lilCarousel {overflow: hidden; position: relative;}
+		.carousel ul, .lilCarousel ul {margin: 0; padding: 0; transition: margin-left 0.8s ease;}
+		button {position: absolute; top: 50%}
+		button[data-click="next"] {right: 10px}
+		button[data-click="prev"] {left: 10px}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jsm-03.js" ></script>
+</head>
+<body>
+	<div class="carousel">
+		<ul>
+			<li><img src="images/i1.jpg" alt="" /></li>
+			<li><img src="images/i2.jpg" alt="" /></li>
+			<li><img src="images/i3.jpg" alt="" /></li>
+			<li><img src="images/i4.jpg" alt="" /></li>
+			<li><img src="images/i5.jpg" alt="" /></li>
+		</ul>
+		<button data-click="next">Next</button>
+		<button data-click="prev">Prev</button>
+	</div><br>
+	<div class="lilCarousel">
+		<ul>
+			<li><img src="images/i2.jpg" alt="" /></li>
+			<li><img src="images/i3.jpg" alt="" /></li>
+			<li><img src="images/i4.jpg" alt="" /></li>
+		</ul>
+		<button data-click="next">Next</button>
+		<button data-click="prev">Prev</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿/* MIXINS
+Prject : MagPhil
+By : Gajen
+Year : 2014 */
+
+
+/* Font Sizes
+----------------------------------------------------------------*/
+
+.font-size (@size: 10) {
+	font-size: e(%("%dpx", @size));
+	font-size: e(%("%drem", @size/10));
+}
+
+/* Line Height
+----------------------------------------------------------------*/
+
+.line-height (@size: 10) {
+	line-height: e(%("%dpx", @size));
+	line-height: e(%("%drem", @size/10));
+}
+
+/* Margins & Padding
+----------------------------------------------------------------*/
+
+.margin-bottom (@size: 10) {
+	margin-bottom: e(%("%dpx", @size));
+	margin-bottom: e(%("%drem", @size/10));
+}
+.margin-top (@size: 10) {
+	margin-top: e(%("%dpx", @size));
+	margin-top: e(%("%drem", @size/10));
+}
+.margin-left (@size: 10) {
+	margin-left: e(%("%dpx", @size));
+	margin-left: e(%("%drem", @size/10));
+}
+.margin-right (@size: 10) {
+	margin-right: e(%("%dpx", @size));
+	margin-right: e(%("%drem", @size/10));
+}
+
+// Shorthand
+
+.margin (@size-left: 10, @size-top: 10, @size-right: 10, @size-bottom: 10) {
+	margin: e(%("%dpx", @size-left)) e(%("%dpx", @size-top)) e(%("%dpx", @size-right)) e(%("%dpx", @size-bottom));
+	margin: e(%("%drem", @size-left/10)) e(%("%drem", @size-top/10)) e(%("%drem", @size-right/10)) e(%("%drem", @size-bottom/10))
+}
+
+.padding-bottom (@size: 10) {
+	padding-bottom: e(%("%dpx", @size));
+	padding-bottom: e(%("%drem", @size/10));
+}
+.padding-top (@size: 10) {
+	padding-top: e(%("%dpx", @size));
+	padding-top: e(%("%drem", @size/10));
+}
+.padding-left (@size: 10) {
+	padding-left: e(%("%dpx", @size));
+	padding-left: e(%("%drem", @size/10));
+}
+.padding-right (@size: 10) {
+	padding-right: e(%("%dpx", @size));
+	padding-right: e(%("%drem", @size/10));
+}
+
+// Shorthand
+
+.padding (@size-left: 10, @size-top: 10, @size-right: 10, @size-bottom: 10) {
+	padding: e(%("%dpx", @size-left)) e(%("%dpx", @size-top)) e(%("%dpx", @size-right)) e(%("%dpx", @size-bottom));
+	padding: e(%("%drem", @size-left/10)) e(%("%drem", @size-top/10)) e(%("%drem", @size-right/10)) e(%("%drem", @size-bottom/10))
+}
+
+/* Positioning - in line elements that scale with font-size
+----------------------------------------------------------------*/
+
+.bottom (@size: 10) {
+	bottom: e(%("%dpx", @size));
+	bottom: e(%("%drem", @size/10));
+}
+.top (@size: 10) {
+	top: e(%("%dpx", @size));
+	top: e(%("%drem", @size/10));
+}
+.left (@size: 10) {
+	left: e(%("%dpx", @size));
+	left: e(%("%drem", @size/10));
+}
+.right (@size: 10) {
+	right: e(%("%dpx", @size));
+	right: e(%("%drem", @size/10));
+}
+
+/* Background-Position
+----------------------------------------------------------------*/
+
+.background-position (@x: 0, @y: 0) {
+	background-position: e(%("%dpx", @x)) e(%("%dpx", @y));
+	background-position: e(%("%drem", @x/10)) e(%("%drem", @y/10));
+}
+
+/* Effects and Gradients
+----------------------------------------------------------------*/
+
+/* Two tone color gradient */
+
+.gradient(@color: #F5F5F5, @start: #EEEEEE, @stop: #FFFFFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+.opacity(@value: 100) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=@value)";
+	filter: alpha(opacity=@value);
+	opacity: @value/100;
+}
+
+/* Border-radius */
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+
+	-webkit-border-top-right-radius: e(%("%dpx", @topright));
+	-webkit-border-top-right-radius: e(%("%drem", @topright/10));
+	-webkit-border-bottom-right-radius: e(%("%dpx", @bottomright));
+	-webkit-border-bottom-right-radius: e(%("%drem", @bottomright/10));
+	-webkit-border-bottom-left-radius: e(%("%dpx", @bottomleft));
+	-webkit-border-bottom-left-radius: e(%("%drem", @bottomleft/10));
+	-webkit-border-top-left-radius: e(%("%dpx", @topleft));
+	-webkit-border-top-left-radius: e(%("%drem", @topleft/10));
+
+	-moz-border-top-right-radius: e(%("%dpx", @topright));
+	-moz-border-top-right-radius: e(%("%drem", @topright/10));
+	-moz-border-bottom-right-radius: e(%("%dpx", @bottomright));
+	-moz-border-bottom-right-radius: e(%("%drem", @bottomright/10));
+	-moz-border-bottom-left-radius: e(%("%dpx", @bottomleft));
+	-moz-border-bottom-left-radius: e(%("%drem", @bottomleft/10));
+	-moz-border-top-left-radius: e(%("%dpx", @topleft));
+	-moz-border-top-left-radius: e(%("%drem", @topleft/10));
+
+	border-top-right-radius: e(%("%dpx", @topright));
+	border-top-right-radius: e(%("%drem", @topright/10));
+	border-bottom-right-radius: e(%("%dpx", @bottomright));
+	border-bottom-right-radius: e(%("%drem", @bottomright/10));
+	border-bottom-left-radius: e(%("%dpx", @bottomleft));
+	border-bottom-left-radius: e(%("%drem", @bottomleft/10));
+	border-top-left-radius: e(%("%dpx", @topleft));
+	border-top-left-radius: e(%("%drem", @topleft/10));
+
+	.background-clip(padding-box);
+}
+
+/* Transition all properties */
+
+.transition(@property:all, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -ms-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+
+/* box shadow */
+
+.box-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+/* Layout
+----------------------------------------------------------------*/
+
+.border-box() {
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+}
+.background-clip(@argument: padding-box) {
+  -moz-background-clip: @argument;
+  -webkit-background-clip: @argument;
+  background-clip: @argument;
+}
+
+// Floats
+
+.ftleft() {
+	float: left;
+}
+.ftright() {
+	float: right;
+}
+.ftclear(){
+	clear: both;
+}
+
+.height (@size: 10) {
+	height: e(%("%dpx", @size));
+	height: e(%("%drem", @size/10));
+}
+
+.min-height (@size: 10) {
+	min-height: e(%("%dpx", @size));
+	min-height: e(%("%drem", @size/10));
+}
+.min-width (@size: 10) {
+	min-width: e(%("%dpx", @size));
+	min-width: e(%("%drem", @size/10));
+}
+.max-height (@size: 10) {
+	max-height: e(%("%dpx", @size));
+	max-height: e(%("%drem", @size/10));
+}
+.max-width (@size: 10) {
+	max-width: e(%("%dpx", @size));
+	max-width: e(%("%drem", @size/10));
+}
+.width (@size: 10) {
+	width: e(%("%dpx", @size));
+	width: e(%("%drem", @size/10));
+}
+
+/* Positioning
+----------------------------------------------------------------*/
+
+.top (@size: 0) {
+	top: e(%("%dpx", @size));
+	top: e(%("%drem", @size/10));
+}
+.right (@size: 0) {
+	right: e(%("%dpx", @size));
+	right: e(%("%drem", @size/10));
+}
+.bottom (@size: 0) {
+	bottom: e(%("%dpx", @size));
+	bottom: e(%("%drem", @size/10));
+}
+.left (@size: 0) {
+	left: e(%("%dpx", @size));
+	left: e(%("%drem", @size/10));
+}

@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# 2012-11-16:v 0.1
+
+# Explicitly cached entries
+index.php
+css/normalize.css
+css/main.css
+js/vendor/zepto.min.js
+js/helper.js
+js/main.js
+jqmobile/jquery-1.8.2.min.js
+
+# All other resources (e.g. sites) require the user to be online. 
+NETWORK:
+php/login.php
+php/timesheet.php
+php/process.php
+php/insert.php
+php/week.php
+
+# Additional resources to cache
+CACHE:
+img/logo.png
+img/logo-small.png
+fonts/bpreplay-webfont.eot 
+fonts/bpreplay-webfont.woff
+fonts/bpreplay-webfont.ttf
+fonts/bpreplay-webfont.svg
